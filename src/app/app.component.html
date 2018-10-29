@@ -5,6 +5,5 @@
 <app-saluda [name] ="famous.toUpperCase()" (readed) = doSomething($event)></app-saluda>
 <br>
 <H1>SUPERHEROES</H1>
-<div *ngFor="let hero of heroes">
-    <app-superhero  [hero] = hero></app-superhero>
-</div>
+
+<app-superhero *ngFor="let hero of heroes"  [hero] = hero (call) = handleCall($event)></app-superhero>

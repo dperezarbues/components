@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SuperHero } from './superhero/superhero';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'components';
+  famous = 'famoso';
+  mensaje = ''
+  doSomething = function(evento) {this.mensaje = evento};
+
+  batman: SuperHero = new SuperHero("Batman","Eddie",["power1","power2","power3"]);
+  superman: SuperHero = new SuperHero("Superman","Clark",["power1","power2","power3"]);
+  superLopez: SuperHero = new SuperHero("superLopez","Lopez",["power1","power2","power3"]);
+  heroes:SuperHero[]=[this.batman, this.superLopez, this.superman];
 }

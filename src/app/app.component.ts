@@ -10,10 +10,11 @@ export class AppComponent {
   title = 'components';
   famous = 'famoso';
   mensaje = ''
-  hero = '';
+  herocall = '';
   doSomething = function(evento) {this.mensaje = evento};
   handleCall = function(hero) {
-    this.hero = this.hero || hero.name;
+    this.herocall = hero.name;
+    alert(this.herocall?`Ya he llamado a ${this.hero}`:`Llamando a ${hero.name}`);
   }
 
   batman: SuperHero = new SuperHero("Batman","Eddie",["power1","power2","power3"]);

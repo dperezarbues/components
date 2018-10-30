@@ -13,8 +13,8 @@ export class AppComponent {
   herocall = '';
   doSomething = function(evento) {this.mensaje = evento};
   handleCall = function(hero) {
-    this.herocall = hero.name;
-    alert(this.herocall?`Ya he llamado a ${this.hero}`:`Llamando a ${hero.name}`);
+    alert(this.herocall?`Ya he llamado a ${this.herocall}`:`Llamando a ${hero.name}`);
+    this.herocall = this.herocall?this.herocall:hero.name;
   }
 
   batman: SuperHero = new SuperHero("Batman","Eddie",["power1","power2","power3"]);
